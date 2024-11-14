@@ -5,7 +5,7 @@ $curl = curl_init();
 
 // Login request
 curl_setopt_array($curl, [
-    CURLOPT_URL => 'http://23.27.1.80:20604/auth/login',
+    CURLOPT_URL => 'http://1.1.1.1:20604/auth/login',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_COOKIEFILE => '/tmp/cookieFileName',
     CURLOPT_ENCODING => '',
@@ -15,8 +15,8 @@ curl_setopt_array($curl, [
     CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
     CURLOPT_CUSTOMREQUEST => 'POST',
     CURLOPT_POSTFIELDS => json_encode([
-        "userName" => "rrgaming",
-        "password" => "spacem0nkey"
+        "userName" => "",
+        "password" => ""
     ]),
     CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
 ]);
@@ -29,7 +29,7 @@ if (!$response) {
 
 // Fetch services data
 curl_setopt_array($curl, [
-    CURLOPT_URL => 'http://23.27.1.80:20604/api/v2/services.datatables?fd-only',
+    CURLOPT_URL => 'http://1.1.1.1:20604/api/v2/services.datatables?fd-only',
     CURLOPT_CUSTOMREQUEST => 'POST',
     CURLOPT_POSTFIELDS => json_encode([
         "userName" => "username",
